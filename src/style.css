@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c09064;
+    color: #1e1e1e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #c09064;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    width: 170px;
+}
+
+/* Menu de navigation */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 170px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: url(../data/image_accueil.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 980px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    font-size: 25px;
+    color: #EEEEEE;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.titres {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.carte {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.item {
+    text-align: center;
+    margin: 10px;
+}
+
+.item img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 30px;
+}
