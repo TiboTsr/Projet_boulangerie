@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
@@ -17,10 +16,13 @@
             <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
           </a>
         </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          &#9776;
+        </button>
         <nav>
           <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="nos-services.html">Nos Services</a></li>
+            <li><a href="nos-services.html" class="active">Nos Services</a></li>
             <li><a href="stock.html">Affluence/Stock</a></li>
             <li><a href="infos.html">Infos Pratiques</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -31,8 +33,27 @@
 
     <!-- Section principale -->
     <main>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil blanditiis ratione amet voluptatem, quis alias enim perferendis facilis, vitae nemo ut eveniet facere ullam sequi nam eligendi recusandae ad temporibus.</p>
+      <div class="services">
+        <h2>Nos Services</h2>
+        <p>Chez Momo vous propose une large gamme de pains artisanaux, viennoiseries croustillantes, pâtisseries sur commande, ainsi que des sandwichs frais. Nous offrons également un service traiteur pour vos événements privés ou professionnels. Nous vous proposons: </p>
+        <ul>
+          <li>Vente de pain artisanal et viennoiseries (ex : baguettes, pains spéciaux, croissants, etc.)</li>
+          <li>Pâtisseries sur commande (ex : gâteaux, tartes)</li>
+          <li>Sandwichs et plats à emporter</li>
+          <li>Service traiteur pour événements</li>
+        </ul>
+      <img src="./data/image_boulangerie.png" alt="Image boulangerie">
+    </div>
     </main>
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+     const menuToggle = document.querySelector('.menu-toggle');
+     const menu = document.querySelector('nav ul');
+ 
+     menuToggle.addEventListener('click', function() {
+       menu.classList.toggle('show');
+     });
+   });
+     </script>
   </body>
 </html>

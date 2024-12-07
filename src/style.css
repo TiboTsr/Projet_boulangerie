@@ -37,19 +37,99 @@ nav ul {
 }
 
 nav ul li {
+    position: relative;
     margin-left: 170px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #1e1e1e;
-    font-size: 22px;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #1e1e1e;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+nav ul li a.active {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
+
+@media (max-width: 1600px) {
+    nav ul li {
+        margin-left: 50px; 
+    }
+}
+
+@media (max-width: 1200px) {
+    nav ul li {
+        margin-left: 30px; 
+    }
+}
+
+@media (max-width: 1024px) {
+    nav ul li {
+        margin-left: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s ease-out;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
 
 .hero {
     background-image: url(../data/image_accueil.png);
@@ -116,4 +196,147 @@ h2 {
 
 .item p {
     font-size: 30px;
+}
+
+.contact {
+    text-align: left; 
+}
+
+.contact p {
+    font-size: 25px; 
+    font-weight: bold;
+    margin: 10px 0; 
+}
+
+.contact a {
+    color: #1e1e1e; 
+    text-decoration: underline; 
+}
+
+.contact a:hover {
+    color:#EEEEEE; 
+    text-decoration: none;
+}
+
+.social{
+    text-align: center;
+}
+
+.social a{
+    display: inline-block;
+    margin: 0 160px;
+    text-decoration: none;
+}
+
+.social img{
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: auto;
+}
+
+.social p {
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1e1e1e;
+    text-decoration: none;
+  }
+
+.social p:hover{
+    color: #EEEEEE;
+    transition: ease-in-out 0.2s;
+}
+
+.services{
+    color: #2E2E2E;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.services ul {
+    list-style-type: disc; 
+    padding: 40px;
+    margin-left: 50px; 
+}
+
+.services li {
+    font-weight: 500;
+    margin-bottom: 7px; 
+}
+
+.services img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    height: auto;
+    margin: 20px;
+}
+
+
+.affluence{
+    color: #2E2E2E;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.affluence h3{
+    font-size: 26px;
+}
+
+.affluence ul{
+    list-style-type: dics;
+    padding: 40px;
+    margin-left: 50px;
+}
+
+.affluence li {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+.informations {
+    color: #2E2E2E;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.informations h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.informations h3 {
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.informations h3, .informations img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.informations img {
+    width: 60px;
+    height: auto;
+}
+
+.informations p {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.informations ul{
+    list-style-type: disc;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.informations li {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 4px;
 }

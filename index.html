@@ -17,9 +17,12 @@
             <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
           </a>
         </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          &#9776;
+        </button>
         <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
+          <ul class="menu">
+            <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="nos-services.html">Nos Services</a></li>
             <li><a href="stock.html">Affluence/Stock</a></li>
             <li><a href="infos.html">Infos Pratiques</a></li>
@@ -107,6 +110,17 @@
         </div>
       </section>
     </main>
+
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function() {
+      menu.classList.toggle('show');
+    });
+  });
+    </script>
 
   </body>
 </html>
