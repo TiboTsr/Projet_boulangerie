@@ -1,65 +1,71 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <link rel="stylesheet" href="src/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chez Momo</title>
-  </head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="nav-bar">
-        <div class="logo">
-          <a href="index.html">
-            <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
-          </a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          &#9776;
-        </button>
-        <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="nos-services.html">Nos Services</a></li>
-            <li><a href="stock.html" class="active">Affluence/Stock</a></li>
-            <li><a href="infos.html">Infos Pratiques</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Momo</title>
+</head>
 
-    <!-- Section principale -->
-    <main>
-      <div class="affluence">
-        <h2>Affluence et stock</h2>
-        <h3>Affluence en temps réel : 🟢</h3>
-        <ul>
-          <li>🟢 Faible affluence : Moins de 5 personnes en boutique, service rapide.</li>
-          <li>🟡 Affluence modérée : Entre 5 et 10 personnes en boutique, attente modérée.</li>
-          <li>🔴 Forte affluence : Plus de 10 personnes, attendez-vous à un temps d'attente plus long.</li>
-        </ul>
-        <h3>Stock disponible :</h3>
-        <ul>
-          <li>🟢 Disponible : Article en quantité suffisante, vous pouvez le trouver facilement en boutique.</li>
-          <li>🟡 Faible stock : Article en quantité limitée, il pourrait s'épuiser rapidement. Pensez à vérifier la disponibilité.</li>
-          <li>🔴 En rupture : Article actuellement indisponible. Il n'est pas en stock, vérifiez nos autres options.</li>
-        </ul>
-        <h4>Mis à jour toutes les 5 minutes.</h4>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
+        </a>
       </div>
-    </main>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-     const menuToggle = document.querySelector('.menu-toggle');
-     const menu = document.querySelector('nav ul');
- 
-     menuToggle.addEventListener('click', function() {
-       menu.classList.toggle('show');
-     });
-   });
-     </script>
-  </body>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        &#9776;
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="nos-services.html">Nos Services</a></li>
+          <li><a href="stock.html" class="active">Affluence/Stock</a></li>
+          <li><a href="infos.html">Infos Pratiques</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section principale -->
+  <main>
+    <div class="affluence">
+      <h2>Affluence et stock</h2>
+      <h3>Affluence en temps réel : 🟢</h3>
+      <ul>
+        <li>🟢 Faible affluence : Moins de 5 personnes en boutique, service rapide.</li>
+        <li>🟡 Affluence modérée : Entre 5 et 10 personnes en boutique, attente modérée.</li>
+        <li>🔴 Forte affluence : Plus de 10 personnes, attendez-vous à un temps d'attente plus long.</li>
+      </ul>
+      <h3>Stock disponible :</h3>
+      <ul>
+        <li>🟢 Disponible : Article en quantité suffisante, vous pouvez le trouver facilement en boutique.</li>
+        <li>🟡 Faible stock : Article en quantité limitée, il pourrait s'épuiser rapidement. Pensez à vérifier la
+          disponibilité.</li>
+        <li>🔴 En rupture : Article actuellement indisponible. Il n'est pas en stock, vérifiez nos autres options.</li>
+      </ul>
+      <h4>Mis à jour toutes les 5 minutes.</h4>
+    </div>
+  </main>
+  <footer><a href="mentions_legales.html">&copy; 2024 Boulangerie Chez Momo. Tous droits réservés. Mentions légales</a>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('nav ul');
+
+      menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+
 </html>

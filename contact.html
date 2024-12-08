@@ -1,65 +1,73 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <link rel="stylesheet" href="src/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chez Momo</title>
-  </head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="nav-bar">
-        <div class="logo">
-          <a href="index.html">
-            <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
-          </a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          &#9776;
-        </button>
-        <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="nos-services.html">Nos Services</a></li>
-            <li><a href="stock.html">Affluence/Stock</a></li>
-            <li><a href="infos.html">Infos Pratiques</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Momo</title>
+</head>
 
-    <!-- Section principale -->
-    <main>
-      <div class="contact">
-        <h2>Contact</h2>
-        <p>Contactez-nous</p>
-        <p>Téléphone : 01 23 45 67 89</p>
-        <p>Email : <a href="mailto:contact@chezmomo-boulangerie.fr">contact@chezmomo-boulangerie.fr</a></p>
-        <p>Adresse : 123 Rue du Pain, 93000 La Courneuve, France</p>
-        <p>Suivez-nous sur nos réseaux :</p>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
+        </a>
       </div>
-      <div class="social">
-        <a href="https://www.instagram.com/"><img src="./data/Instagram_logo.png" alt="Instagram">
-        <p>@chezmomo93</p></a>
-        <a href="https://www.facebook.com/"><img style="width: 150px;" src="./data/Facebook_logo.png" alt="Facebook">
-        <p>ChezMomo93</p></a>
-        <a href="https://www.snapchat.com/"><img src="./data/Snapchat_logo.png" alt="Snapchat">
-        <p>@chezmomo93</p></a>
-      </div>
-    </main>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-     const menuToggle = document.querySelector('.menu-toggle');
-     const menu = document.querySelector('nav ul');
- 
-     menuToggle.addEventListener('click', function() {
-       menu.classList.toggle('show');
-     });
-   });
-     </script>
-  </body>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        &#9776;
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="nos-services.html">Nos Services</a></li>
+          <li><a href="stock.html">Affluence/Stock</a></li>
+          <li><a href="infos.html">Infos Pratiques</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section principale -->
+  <main>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Contactez-nous</p>
+      <p>Téléphone : 01 23 45 67 89</p>
+      <p>Email : <a href="mailto:contact@chezmomo-boulangerie.fr">contact@chezmomo-boulangerie.fr</a></p>
+      <p>Adresse : 123 Rue du Pain, 93000 La Courneuve, France</p>
+      <p>Suivez-nous sur nos réseaux :</p>
+    </div>
+    <div class="social">
+      <a href="https://www.instagram.com/"><img src="./data/Instagram_logo.png" alt="Instagram">
+        <p>@chezmomo93</p>
+      </a>
+      <a href="https://www.facebook.com/"><img style="width: 120px;" src="./data/Facebook_logo.png" alt="Facebook">
+        <p>ChezMomo93</p>
+      </a>
+      <a href="https://www.snapchat.com/"><img src="./data/Snapchat_logo.png" alt="Snapchat">
+        <p>@chezmomo93</p>
+      </a>
+    </div>
+  </main>
+  <footer><a href="mentions_legales.html">&copy; 2024 Boulangerie Chez Momo. Tous droits réservés. Mentions légales</a>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('nav ul');
+
+      menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+
 </html>

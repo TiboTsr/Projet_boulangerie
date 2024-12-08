@@ -1,59 +1,67 @@
+<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <link rel="stylesheet" href="src/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chez Momo</title>
-  </head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="nav-bar">
-        <div class="logo">
-          <a href="index.html">
-            <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
-          </a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          &#9776;
-        </button>
-        <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="nos-services.html" class="active">Nos Services</a></li>
-            <li><a href="stock.html">Affluence/Stock</a></li>
-            <li><a href="infos.html">Infos Pratiques</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Momo</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
+        </a>
       </div>
-    </header>
-
-    <!-- Section principale -->
-    <main>
-      <div class="services">
-        <h2>Nos Services</h2>
-        <p>Chez Momo vous propose une large gamme de pains artisanaux, viennoiseries croustillantes, pâtisseries sur commande, ainsi que des sandwichs frais. Nous offrons également un service traiteur pour vos événements privés ou professionnels. Nous vous proposons: </p>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        &#9776;
+      </button>
+      <nav>
         <ul>
-          <li>Vente de pain artisanal et viennoiseries (ex : baguettes, pains spéciaux, croissants, etc.)</li>
-          <li>Pâtisseries sur commande (ex : gâteaux, tartes)</li>
-          <li>Sandwichs et plats à emporter</li>
-          <li>Service traiteur pour événements</li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="nos-services.html" class="active">Nos Services</a></li>
+          <li><a href="stock.html">Affluence/Stock</a></li>
+          <li><a href="infos.html">Infos Pratiques</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section principale -->
+  <main>
+    <div class="services">
+      <h2>Nos Services</h2>
+      <p>Chez Momo vous propose une large gamme de pains artisanaux, viennoiseries croustillantes, pâtisseries sur
+        commande, ainsi que des sandwichs frais. Nous offrons également un service traiteur pour vos événements privés
+        ou professionnels. Nous vous proposons: </p>
+      <ul>
+        <li>Vente de pain artisanal et viennoiseries (ex : baguettes, pains spéciaux, croissants, etc.)</li>
+        <li>Pâtisseries sur commande (ex : gâteaux, tartes)</li>
+        <li>Sandwichs et plats à emporter</li>
+        <li>Service traiteur pour événements</li>
+      </ul>
       <img src="./data/image_boulangerie.png" alt="Image boulangerie">
     </div>
-    </main>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-     const menuToggle = document.querySelector('.menu-toggle');
-     const menu = document.querySelector('nav ul');
- 
-     menuToggle.addEventListener('click', function() {
-       menu.classList.toggle('show');
-     });
-   });
-     </script>
-  </body>
+  </main>
+  <footer><a href="mentions_legales.html">&copy; 2024 Boulangerie Chez Momo. Tous droits réservés. Mentions légales</a>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('nav ul');
+
+      menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+
 </html>

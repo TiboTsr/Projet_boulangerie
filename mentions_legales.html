@@ -1,50 +1,67 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <link rel="stylesheet" href="src/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chez Momo</title>
-  </head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="nav-bar">
-        <div class="logo">
-          <a href="index.html">
-            <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
-          </a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          &#9776;
-        </button>
-        <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="nos-services.html">Nos Services</a></li>
-            <li><a href="stock.html" class="active">Affluence/Stock</a></li>
-            <li><a href="infos.html">Infos Pratiques</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Momo</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-img" src="data/logo.png" alt="Logo Chez Momo">
+        </a>
       </div>
-    </header>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        &#9776;
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="nos-services.html">Nos Services</a></li>
+          <li><a href="stock.html" class="active">Affluence/Stock</a></li>
+          <li><a href="infos.html">Infos Pratiques</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Section principale -->
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore fuga mollitia corrupti beatae aliquam vel cum vitae, omnis officia tempore iure dolor ratione facere adipisci voluptas atque. Temporibus, veniam.</p>
-    </main>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-     const menuToggle = document.querySelector('.menu-toggle');
-     const menu = document.querySelector('nav ul');
- 
-     menuToggle.addEventListener('click', function() {
-       menu.classList.toggle('show');
-     });
-   });
-     </script>
-  </body>
+  <!-- Section principale -->
+  <main>
+    <div class="mentions">
+      <h2>Mentions légales</h2>
+      <h3>Editeur du site</h3>
+      <p>Boulangerie Chez Momo <br>
+        Adresse : 123 Rue du Pain, 93000 La Courneuve, FranceE-mail : contact@chezmomo-boulangerie.fr<br>
+        Téléphone : 01 23 45 67 89<br>
+        SIRET : 123 456 789 00010</p>
+      <h3>Hébergement : </h3>
+      <p>Ce site est hebergé sur nos serveurs situé en France</p>
+      <h3>Propriété intellectuelle :</h3>
+      <p>Tous les contenus présents sur ce site (textes, images, illustrations, etc.) sont fictifs et créés dans le
+        cadre d'un projet éducatif.</p>
+    </div>
+  </main>
+  <footer><a href="mentions_legales.html">&copy; 2024 Boulangerie Chez Momo. Tous droits réservés. Mentions légales</a>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('nav ul');
+
+      menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+
 </html>
