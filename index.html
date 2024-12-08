@@ -118,40 +118,8 @@
 
   <footer><a href="mentions_legales.html">&copy; 2024 Boulangerie Chez Momo. Tous droits réservés. Mentions légales</a>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('nav ul');
 
-      menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('show');
-      });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('nav ul');
-
-      menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('show');
-      });
-
-      // Smooth scroll
-      const links = document.querySelectorAll('a[href^="#"]');
-      for (const link of links) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
-          });
-        });
-      }
-    });
-  </script>
+  <script src="./src/main.js"></script>
 
 </body>
 

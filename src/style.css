@@ -127,37 +127,36 @@ nav ul li a.active {
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px;
-    }
-
-    .nav-bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
     nav ul {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
-        transition: 0.3s ease-out;
         overflow: hidden;
-        max-height: 0;
+        max-height: 0; /* Menu caché par défaut */
+        transition: max-height 0.3s ease-out; /* Transition fluide */
     }
 
     nav ul.show {
-        display: flex;
+        max-height: 500px; /* Ajuste selon le contenu du menu */
     }
 
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
+        text-align: center; /* Centrer les liens */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: #1e1e1e; /* Couleur de l'icône */
+        background: none;
+        border: none;
+    }
+
+    .menu-toggle:focus {
+        outline: none; /* Supprime l'effet de focus sur mobile */
     }
 
     .logo img {
@@ -165,7 +164,6 @@ nav ul li a.active {
         margin-bottom: 10px;
     }
 }
-
 
 
 .hero {
