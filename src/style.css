@@ -132,31 +132,31 @@ nav ul li a.active {
         flex-direction: column;
         width: 100%;
         overflow: hidden;
-        max-height: 0; /* Menu caché par défaut */
-        transition: max-height 0.3s ease-out; /* Transition fluide */
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
     }
 
     nav ul.show {
-        max-height: 500px; /* Ajuste selon le contenu du menu */
+        max-height: 500px;
     }
 
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
-        text-align: center; /* Centrer les liens */
+        text-align: center;
     }
 
     .menu-toggle {
         display: block;
         cursor: pointer;
         font-size: 30px;
-        color: #1e1e1e; /* Couleur de l'icône */
+        color: #1e1e1e;
         background: none;
         border: none;
     }
 
     .menu-toggle:focus {
-        outline: none; /* Supprime l'effet de focus sur mobile */
+        outline: none;
     }
 
     .logo img {
@@ -320,7 +320,6 @@ h2 {
 
 }
 
-
 .affluence {
     color: #2E2E2E;
     font-weight: bold;
@@ -421,4 +420,21 @@ footer {
 footer a {
     color: #1e1e1e;
     text-decoration: none;
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+    padding: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #5f5f5f;
+    border-radius: 10px;
+    border: 0px solid black;
 }
