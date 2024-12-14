@@ -1,21 +1,25 @@
+/* Réinitialisation des marges et des paddings pour tous les éléments
+*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Styles généraux pour le corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #c09064;
-    color: #1e1e1e;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif; /* Police générale de la page */
+    background-color: #c09064; /* Couleur de fond principale */
+    color: #1e1e1e; /* Couleur du texte principal */
+    overflow-x: hidden; /* Évite le défilement horizontal */
 }
 
+/* Section header : barre de navigation principale */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #c09064;
+    display: flex; /* Affiche les enfants en ligne */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Aligne verticalement au centre */
+    padding: 20px 50px; /* Espacement intérieur */
+    background-color: #c09064; /* Couleur de fond */
 }
 
 .nav-bar {
@@ -25,57 +29,58 @@ header {
     width: 100%;
 }
 
-/* Logo */
 .logo img {
-    width: 170px;
+    width: 170px; /* Taille du logo */
 }
 
 /* Menu de navigation */
 nav ul {
     display: flex;
-    list-style-type: none;
+    list-style-type: none; /* Supprime les puces de liste */
     margin: 0;
     padding: 0;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-between; /* Espace égal entre les éléments */
 }
 
 nav ul li {
-    position: relative;
-    margin-left: 170px;
+    position: relative; /* Nécessaire pour les éléments pseudo comme ::after */
+    margin-left: 170px; /* Espacement entre les items */
 }
 
+/* Style des liens dans la navigation */
 nav ul li a {
-    text-decoration: none;
-    color: #1e1e1e;
-    font-size: 20px;
+    text-decoration: none; /* Supprime le soulignement */
+    color: #1e1e1e; /* Couleur du texte */
+    font-size: 20px; /* Taille de police */
     position: relative;
     display: inline-block;
-    padding-bottom: 5px;
-    padding: 10px 25px;
+    padding: 10px 25px; /* Espacement intérieur */
 }
 
+/* Effet de survol avec une ligne animée */
 nav ul li a::after {
-    content: '';
+    content: ''; /* Pseudo-élément vide */
     position: absolute;
-    width: 0;
-    height: 3px;
+    width: 0; /* Initialement caché */
+    height: 3px; /* Épaisseur de la ligne */
     display: block;
     margin-top: 5px;
     right: 0;
-    background: #1e1e1e;
-    transition: width 0.3s ease, left 0.3s ease;
+    background: #1e1e1e; /* Couleur de la ligne */
+    transition: width 0.3s ease, left 0.3s ease; /* Animation fluide */
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%; /* Ligne sétend sous le lien */
     left: 0;
 }
 
 nav ul li a.active {
-    font-weight: bold;
+    font-weight: bold; /* Met en gras le lien actif */
 }
 
+/* Bouton pour menu responsive */
 .menu-toggle {
     display: none;
     font-size: 30px;
@@ -84,6 +89,7 @@ nav ul li a.active {
     cursor: pointer;
 }
 
+/* Responsivité pour les écrans moyens et petits */
 @media (max-width: 1600px) {
     nav ul li {
         margin-left: 50px;
@@ -94,7 +100,7 @@ nav ul li a.active {
     }
 
     .logo img {
-        width: 150px;
+        width: 150px; /* Réduction de la taille du logo */
     }
 }
 
@@ -127,27 +133,28 @@ nav ul li a.active {
 }
 
 @media (max-width: 768px) {
+    /* Menu de navigation vertical pour les petits écrans */
     nav ul {
         display: flex;
         flex-direction: column;
         width: 100%;
-        overflow: hidden;
-        max-height: 0;
+        overflow: hidden; /* Cache les éléments hors champ */
+        max-height: 0; /* Fermeture initiale */
         transition: max-height 0.3s ease-out;
     }
 
     nav ul.show {
-        max-height: 500px;
+        max-height: 500px; /* Menu ouvert */
     }
 
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
-        text-align: center;
+        text-align: center; /* Centrage pour petits écrans */
     }
 
     .menu-toggle {
-        display: block;
+        display: block; /* Affiche le bouton pour mobiles */
         cursor: pointer;
         font-size: 30px;
         color: #1e1e1e;
@@ -156,7 +163,7 @@ nav ul li a.active {
     }
 
     .menu-toggle:focus {
-        outline: none;
+        outline: none; /* Supprime le focus */
     }
 
     .logo img {
@@ -165,9 +172,9 @@ nav ul li a.active {
     }
 }
 
-
+/* Section héro : image de fond avec contenu centré */
 .hero {
-    background-image: url(../data/image_accueil.png);
+    background-image: url(../data/image_accueil.png); /* Image de fond */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,7 +182,7 @@ nav ul li a.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: white; /* Couleur du texte */
     text-align: center;
     position: relative;
 }
@@ -189,12 +196,13 @@ nav ul li a.active {
 }
 
 .hero-content a {
-    color: inherit;
-    text-decoration: none;
+    color: inherit; /* Utilise la couleur parent */
+    text-decoration: none; /* Supprime le soulignement */
 }
 
+/* Section principale */
 main {
-    padding: 20px;
+    padding: 20px; /* Espacement intérieur */
 }
 
 h2 {
@@ -209,6 +217,7 @@ h2 {
     margin: 20px;
 }
 
+/* Styles pour les "cartes" */
 .carte {
     margin: 20px auto;
     width: 90%;
@@ -229,15 +238,16 @@ h2 {
 .item img {
     width: 250px;
     height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    border-radius: 10px; /* Coins arrondis */
+    object-fit: cover; /* Image redimensionnée */
     margin-bottom: 10px;
 }
 
 .item p {
-    font-size: 30px;
+    font-size: 30px; /* Texte sous les images */
 }
 
+/* Section contact */
 .contact {
     text-align: left;
 }
@@ -257,6 +267,7 @@ h2 {
     text-decoration: none;
 }
 
+/* Section sociale */
 .social {
     text-align: center;
 }
@@ -274,167 +285,172 @@ h2 {
     height: auto;
 }
 
+/* Section sociale : icônes et liens vers les réseaux sociaux */
 .social p {
-    margin-top: 5px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #1e1e1e;
-    text-decoration: none;
+    margin-top: 5px; 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: #1e1e1e; 
+    text-decoration: none; /* Supprime le soulignement */
 }
 
 .social p:hover {
-    color: #EEEEEE;
-    transition: ease-in-out 0.2s;
+    color: #EEEEEE; /* Changement de couleur au survol */
+    transition: ease-in-out 0.2s; /* Animation de transition fluide */
 }
 
+/* Section services : liste et image fixe */
 .services {
-    color: #2E2E2E;
-    font-size: 25px;
-    font-weight: bold;
+    color: #2E2E2E; 
+    font-size: 25px; 
+    font-weight: bold; 
 }
 
 .services ul {
-    list-style-type: disc;
+    list-style-type: disc; 
     padding: 40px;
-    margin-left: 50px;
+    margin-left: 50px; 
 }
 
 .services li {
-    font-weight: 500;
-    margin-bottom: 7px;
+    font-weight: 500; 
+    margin-bottom: 7px; 
 }
 
 .services img {
-    position: fixed;
+    position: fixed; /* Position fixe en bas à droite */
     bottom: 0;
     right: 0;
-    width: 15%;
-    height: auto;
-    margin: 20px;
+    width: 15%; 
+    height: auto; /* Conserve les proportions */
+    margin: 20px; /* Marges autour de l'image */
 }
 
+/* Cacher l'image pour les écrans étroits */
 @media (max-width: 800px) {
     .services img {
-        display: none;
+        display: none; /* Masquer l'image fixe */
     }
-
 }
 
+/* Section affluence : informations de fréquentation */
 .affluence {
-    color: #2E2E2E;
-    font-weight: bold;
-    padding-left: 30px;
+    color: #2E2E2E; 
+    font-weight: bold; 
+    padding-left: 30px; 
 }
 
 .affluence h3 {
-    font-size: 22px;
+    font-size: 22px; /* Taille des titres */
 }
 
 .affluence ul {
-    list-style-type: dics;
-    padding: 40px;
-    margin-left: 50px;
+    list-style-type: disc; 
+    padding: 40px; 
+    margin-left: 50px; 
 }
 
 .affluence li {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 4px;
+    font-weight: 700; 
+    font-size: 20px;  
+    margin-bottom: 4px; /* Espacement entre les items */
 }
 
+/* Section informations : texte, listes et icônes */
 .informations {
-    color: #2E2E2E;
-    font-weight: bold;
-    padding-left: 30px;
+    color: #2E2E2E; /* Couleur principale */
+    font-weight: bold; /* Texte en gras */
+    padding-left: 30px; /* Décalage à gauche */
 }
 
 .informations h2 {
-    text-align: center;
-    width: 100%;
+    text-align: center; 
+    width: 100%; /* Occupe toute la largeur */
 }
 
 .informations h3 {
-    font-size: 22px;
-    padding-bottom: 10px;
+    font-size: 22px; 
+    padding-bottom: 10px; 
 }
 
 .informations h3,
 .informations img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-right: 10px; 
 }
 
 .informations img {
-    width: 60px;
-    height: auto;
+    width: 60px; 
+    height: auto; 
 }
 
 .informations p {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-size: 18px; 
+    font-weight: 500; 
+    margin-bottom: 10px; 
 }
 
 .informations ul {
-    list-style-type: disc;
-    padding: 20px;
-    margin-left: 50px;
+    list-style-type: disc; 
+    padding: 20px; 
+    margin-left: 50px; 
 }
 
 .informations li {
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 4px;
+    font-weight: 500; 
+    font-size: 20px; 
+    margin-bottom: 4px; /* Espacement entre les items */
 }
 
+/* Section mentions légales */
 .mentions {
-    color: #2E2E2E;
-    font-weight: bold;
-    padding-left: 30px;
+    color: #2E2E2E; /* Couleur principale */
+    font-weight: bold; /* Texte en gras */
+    padding-left: 30px; /* Décalage à gauche */
 }
 
 .mentions h3 {
-    font-size: 22px;
-    padding-bottom: 10px;
+    font-size: 22px; /* Taille des sous-titres */
+    padding-bottom: 10px; /* Espacement en dessous */
 }
 
 .mentions p {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-size: 18px; 
+    font-weight: 500; 
+    margin-bottom: 10px; /* Espacement entre paragraphes */
 }
 
+/* Section footer : pied de page */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #c09064;
-    color: #1e1e1e;
-    text-align: center;
-    width: 100%;
-    position: relative;
+    display: flex; /* Affichage en ligne des enfants */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; 
+    padding: 10px; 
+    background-color: #c09064; 
+    color: #1e1e1e; 
+    text-align: center; /* Alignement du texte */
+    width: 100%; /* Occupe toute la largeur */
+    position: relative; /* Permet d'ajuster des éléments internes */
 }
 
 footer a {
-    color: #1e1e1e;
-    text-decoration: none;
+    color: #1e1e1e; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement */
 }
 
-/* Scrollbar */
-
+/* Personnalisation de la scrollbar */
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 10px; /* Largeur de la scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-    background: black;
-    padding: 5px;
+    background: black; /* Couleur de la piste */
+    padding: 5px; /* Espacement intérieur */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #5f5f5f;
-    border-radius: 10px;
-    border: 0px solid black;
+    background-color: #5f5f5f; /* Couleur du curseur */
+    border-radius: 10px; /* Arrondi des bords */
+    border: 0px solid black; /* Supprime la bordure */
 }
