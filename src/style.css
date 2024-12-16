@@ -1,8 +1,11 @@
-/* Réinitialisation des marges et des paddings pour tous les éléments
-*/
+/* Réinitialisation des marges et des paddings pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Scroll fluide */
 }
 
 /* Styles généraux pour le corps de la page */
@@ -80,13 +83,17 @@ nav ul li a.active {
     font-weight: bold; /* Met en gras le lien actif */
 }
 
-/* Bouton pour menu responsive */
+/* Menu mobile : bouton de menu et affichage du menu */
 .menu-toggle {
     display: none;
     font-size: 30px;
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.menu-icon{
+    display: none;
 }
 
 /* Responsivité pour les écrans moyens et petits */
@@ -139,11 +146,16 @@ nav ul li a.active {
         flex-direction: column;
         width: 100%;
         overflow: hidden; /* Cache les éléments hors champ */
-        max-height: 0; /* Fermeture initiale */
-        transition: max-height 0.3s ease-out;
+        max-height: 0; /* Menu fermé */
+        transition: max-height 0.3s ease-out; /* Animation pour l'ouverture */
     }
 
-    nav ul.show {
+    .menu-icon{
+        display: block;
+    }
+
+    /* Lorsque la case est cochée, on affiche le menu */
+    #menu-toggle:checked + label + nav ul {
         max-height: 500px; /* Menu ouvert */
     }
 
@@ -172,7 +184,7 @@ nav ul li a.active {
     }
 }
 
-/* Section héro : image de fond avec contenu centré */
+/* Section héro : image de fond */
 .hero {
     background-image: url(../data/image_accueil.png); /* Image de fond */
     background-size: cover;
@@ -217,7 +229,7 @@ h2 {
     margin: 20px;
 }
 
-/* Styles pour les "cartes" */
+/* Styles pour les "cartes */
 .carte {
     margin: 20px auto;
     width: 90%;
